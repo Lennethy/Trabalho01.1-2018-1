@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Tinta</string>
+    <string name="app_name">Tintas</string>
+    <string name="m2">Metros Quadrados</string>
+    <string name="qtd">Qtd de Tinta</string>
 </resources>
