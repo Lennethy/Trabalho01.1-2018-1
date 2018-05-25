@@ -1,4 +1,4 @@
-package br.iff.edu.pooaiff20181.lojadetintas;
+package br.iff.edu.pooaiff20181.tinta;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -6,8 +6,6 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-
-import org.w3c.dom.Text;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -23,9 +21,6 @@ public class MainActivity extends AppCompatActivity {
     private int comboGalao;
     private float litrosRestanteL;
     private float litrosRestanteG;
-    private float valorLata;
-    private float valorGalao;
-    private float valorTotal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +55,7 @@ public class MainActivity extends AppCompatActivity {
         if(litrosRestanteL != 0){
             qtdLata += 1;
         }
-        if(litrosRestanteL != 0){
+        if(litrosRestanteG != 0){
             qtdGalao += 1;
         }
 
@@ -89,8 +84,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void msgResultado(){
 
-        tvLata.setText("Latas apenas: " + qtdLata +" latas. Valor:R$ "+ (qtdLata * 80));
-        tvGalao.setText("Galões apenas: " + qtdGalao +" galões. Valor:R$ "+ (qtdGalao * 25));
+        tvLata.setText("Latas apenas: " + qtdLata +" latas.\nValor:R$ "+ (qtdLata * 80));
+        tvGalao.setText("Galões apenas: " + qtdGalao +" galões.\nValor:R$ "+ (qtdGalao * 25));
         tvCombo.setText("Combinação: " + comboLata +" latas e " + comboGalao +" galões \nno valor de R$ " +((comboLata * 80) + (comboGalao * 25)));
     }
 }
